@@ -614,11 +614,8 @@ export const LOCATION_SHARING_EMAIL_TEMPLATE = `
   </ul>
 
   <div style="text-align: center; margin: 30px 0;">
-    <a href="{locationLink}" target="_blank" style="display: inline-block; background-color: #d32f2f; color: white; padding: 12px 20px; margin: 10px 5px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-      View Live Location
-    </a>
-    <a href="{mediaLink}" target="_blank" style="display: inline-block; background-color: #1976d2; color: white; padding: 12px 20px; margin: 10px 5px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-      Watch Live Media
+     <a href="{link}" target="_blank" style="display: inline-block; background-color: #d32f2f; color: white; padding: 12px 20px; margin: 10px 5px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+      View Live Location & Watch Live Media
     </a>
   </div>
 
