@@ -162,11 +162,24 @@ export const login = async (req, res) => {
     res.status(400).json({ success: false, message: error.message });
   }
 };
-
 export const logout = async (req, res) => {
-  res.clearCookie("token");
-  res.status(200).json({ success: true, message: "Logged out successfully" });
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production", // required for HTTPS
+    sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // must match how token was set
+    path: "/", // important to match cookie path if it was set
+  });
+
+  return res.status(200).json({
+    success: true,
+    message: "Logged out successfully",
+  });
 };
+
+// export const logout = async (req, res) => {
+//   res.clearCookie("token");
+//   res.status(200).json({ success: true, message: "Logged out successfully" });
+// };
 
 export const forgotPassword = async (req, res) => {
   const { email } = req.body;
