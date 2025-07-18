@@ -76,6 +76,7 @@ const __dirname = path.resolve();
 
 // ✅ CORS Configuration for Render (API) + Vercel (Frontend)
 const allowedOrigins = [
+  "https://sos-web-pied.vercel.app",
   "https://sos-alert-beta.vercel.app",       // ✅ Frontend (Vercel production)
   "https://sos-alert-beta.onrender.com",     // ✅ If frontend is also deployed on Render
   "http://localhost:3000",                   // ✅ Local dev
