@@ -109,6 +109,11 @@ app.use((req, res, next) => {
 });
 
 // ✅ Routes
+// Keep-alive ping route
+app.get('/ping', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/email", sharingEmail);
 
