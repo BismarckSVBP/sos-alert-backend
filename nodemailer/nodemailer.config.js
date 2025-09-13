@@ -65,4 +65,4 @@ transporter.verify((error, success) => {
   }
 });
 
-export { transporter };
+
